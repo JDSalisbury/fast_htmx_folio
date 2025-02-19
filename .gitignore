@@ -1,0 +1,22 @@
+# Project configuration
+.env
+.Dockerfile
+docker-compose.yml
+.venv
+
+# FastAPI application
+__pycache__/
+*.pyc
+*.pyd
+*.so
+*.o
+*.class
+*~
+
+
+# Temporary files
+tmp/
+*.log
+*.tmp
+*.bak
+

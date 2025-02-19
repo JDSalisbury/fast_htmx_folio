@@ -1,0 +1,32 @@
+<div>
+  <h2 class="text-2xl font-bold">Contact Me</h2>
+  <form
+    class="mt-4"
+    hx-post="/send-email/"
+    hx-target="#response-message"
+    hx-swap="innerHTML"
+    hx-on="htmx:afterRequest: this.reset()"
+  >
+    <input
+      type="email"
+      name="email"
+      placeholder="Your Email"
+      required
+      class="border p-2 w-full rounded mb-2"
+    />
+
+    <textarea
+      name="message"
+      placeholder="Your Message"
+      required
+      class="border p-2 w-full rounded mb-2"
+    ></textarea>
+
+    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">
+      Send
+    </button>
+  </form>
+
+  <!-- This div will show success/failure messages -->
+  <div id="response-message" class="mt-2 text-sm"></div>
+</div>

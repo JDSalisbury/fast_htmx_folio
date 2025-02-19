@@ -1,0 +1,196 @@
+<div class="bg-gray-100 p-4">
+  <div class="border-1 shadow-lg shadow-gray-700 rounded-lg">
+    <!-- top content -->
+    <div class="flex rounded-t-lg bg-top-color sm:px-2 w-full">
+      <div
+        class="h-40 w-40 overflow-hidden sm:rounded-full sm:relative sm:p-0 top-10 left-5 p-3"
+      >
+        <img src="/static/headshot-09-17-24-2.jpg" />
+      </div>
+
+      <div class="w-2/3 sm:text-center pl-5 mt-10 text-start">
+        <p class="font-poppins font-bold text-heading sm:text-4xl text-2xl">
+          Jeffery Salisbury
+        </p>
+        <p class="text-heading">V.P. Software Engineer</p>
+      </div>
+    </div>
+
+    <!-- main content -->
+    <div class="p-5">
+      <div class="flex flex-col sm:flex-row sm:mt-10">
+        <div class="flex flex-col sm:w-1/3">
+          <!-- My contact -->
+          <div
+            hx-get="/contactInfo.html"
+            hx-trigger="load"
+            hx-target="#user-container"
+          ></div>
+          <div id="user-container"></div>
+
+          <!-- Skills -->
+          <div class="py-3 sm:order-none order-2">
+            <h2 class="text-lg font-poppins font-bold text-top-color">
+              Skills
+            </h2>
+            <div class="border-2 w-20 border-top-color my-3"></div>
+
+            <ul class="list-disc pl-4 text-heading">
+              <li>Python, Django, Django REST Framework, FastAPI</li>
+              <li>JavaScript, React, Redux, Vue, Vuex, Tailwind, Celery</li>
+              <li>AWS, Docker, Cloud Foundry, Jenkins, Redis, Mongo, MySQL</li>
+              <li>Agile, TDD, DDD, OOP</li>
+              <li>Git, Bitbucket, Atlassian, Figma</li>
+            </ul>
+          </div>
+
+          <!-- Education Background -->
+          <div class="py-3 sm:order-none order-1">
+            <h2 class="text-lg font-poppins font-bold text-top-color">
+              Education / Certifications
+            </h2>
+            <div class="border-2 w-20 border-top-color my-3"></div>
+
+            <div class="flex flex-col space-y-1 text-heading">
+              <div class="flex flex-col">
+                <p class="font-semibold text-xs">
+                  AWS Certified Cloud Practitioner
+                </p>
+                <p class="text-sm font-medium">AWS</p>
+              </div>
+              <div class="flex flex-col">
+                <p class="font-semibold text-xs">
+                  Certificate of Software Development
+                </p>
+                <p class="text-sm font-medium">We Can Code IT</p>
+              </div>
+              <div class="flex flex-col">
+                <p class="font-semibold text-xs">Game and Simulation Design</p>
+                <p class="text-sm font-medium">DeVry University</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:w-2/3 order-first sm:order-none sm:-mt-10">
+          <!-- About me -->
+          <div class="py-3">
+            <h2 class="text-lg font-poppins font-bold text-top-color">
+              About Me
+            </h2>
+            <div class="border-2 w-20 border-top-color my-3"></div>
+            <p class="text-heading">
+              Innovative and results-driven software engineer with 7+ years of
+              experience in full-stack development, automation, and cloud-based
+              architectures.
+            </p>
+          </div>
+
+          <!-- Professional Experience -->
+          <div class="py-3">
+            <h2 class="text-lg font-poppins font-bold text-top-color">
+              Professional Experience
+            </h2>
+            <div class="border-2 w-20 border-top-color my-3"></div>
+
+            <div class="flex flex-col text-heading">
+              <div class="flex flex-col">
+                <p class="text-lg font-bold">
+                  JPMorgan Chase & Co | V.P. Software Engineer
+                </p>
+                <p class="font-semibold text-sm">2022 - Present</p>
+                <ul class="text-sm list-disc pl-4 space-y-1">
+                  <li>
+                    Led development of an enterprise-wide automation tool
+                    reducing manual effort by 60%.
+                  </li>
+                  <li>
+                    Engineered a DSN automation tool, optimizing data source
+                    provisioning.
+                  </li>
+                  <li>
+                    Designed and developed an internal application serving
+                    100,000+ users.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="flex flex-col mt-8">
+                <p class="text-lg font-bold">PNC | Infrastructure Engineer</p>
+                <p class="font-semibold text-sm">2019 - 2020</p>
+                <ul class="text-sm list-disc pl-4 space-y-1">
+                  <li>
+                    Developed APIs for in-house server provisioning software.
+                  </li>
+                  <li>
+                    Created frontend pages for managing servers using React &
+                    Redux.
+                  </li>
+                  <li>
+                    Implemented stronger commit messages and branching habits
+                    across the team.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="flex flex-col mt-8">
+                <p class="text-lg font-bold">Rue 21 | Lead Developer</p>
+                <p class="font-semibold text-sm">2018 - 2020</p>
+                <ul class="text-sm list-disc pl-4 space-y-1">
+                  <li>
+                    Developed a logistics application for purchase orders using
+                    Django & React.
+                  </li>
+                  <li>Assigned tasks in an Agile environment.</li>
+                  <li>
+                    Maintained code quality through mentoring and code reviews.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projects -->
+          <div class="py-3">
+            <h2 class="text-lg font-poppins font-bold text-top-color">
+              Projects
+            </h2>
+            <div class="border-2 w-20 border-top-color my-3"></div>
+
+            <ul class="list-disc pl-4 text-heading">
+              <li>
+                Developed a DSN automation tool, reducing setup time by 75%.
+              </li>
+              <li>
+                Created an online ordering platform for a local food pantry.
+              </li>
+              <li>Developed a logistics platform for Rue 21 vendors.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  :root {
+    --top-color: #8e4d4d;
+    --heading: #fcfbfc;
+  }
+
+  .bg-top-color {
+    background-color: var(--top-color);
+  }
+
+  /* .text-top-color {
+    color: var(--top-color);
+  } */
+
+  .border-top-color {
+    border-color: var(--top-color);
+  }
+
+  /* .text-heading {
+    color: var(--heading);
+  } */
+</style>
