@@ -6,12 +6,15 @@
     <title>Jeff Salisbury</title>
     <script src="https://unpkg.com/htmx.org@1.9.5"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/static/styles.css" rel="stylesheet" />
   </head>
   <body class="bg-gray-100 text-gray-900">
     <!-- Navigation -->
     <nav class="bg-white shadow-md p-4 flex justify-between items-center">
       <h1 class="text-xl font-bold">My Portfolio</h1>
-      <div>
+
+      <!-- Desktop Menu (Only visible on medium and larger screens) -->
+      <div class="hidden md:flex space-x-4">
         <button class="px-4 py-2" hx-get="/about.html" hx-target="#content">
           About
         </button>
@@ -27,18 +30,83 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <!-- <section class="text-center py-16 bg-gray-200">
-      <h2 class="text-4xl font-bold">Welcome to My Portfolio</h2>
-      <p class="mt-2 text-lg">Showcasing my work and skills</p>
-    </section> -->
+    <!-- Mobile Bottom Navigation Bar -->
+    <div
+      class="fixed bottom-0 left-0 w-full bg-white shadow-md md:hidden flex justify-around p-3 z-10"
+    >
+      <button
+        class="flex flex-col items-center px-4 py-2"
+        hx-get="/about.html"
+        hx-target="#content"
+      >
+        <span>👤</span>
+        <span class="text-xs">About</span>
+      </button>
+      <button
+        class="flex flex-col items-center px-4 py-2"
+        hx-get="/projects.html"
+        hx-target="#content"
+      >
+        <span>💻</span>
+        <span class="text-xs">Projects</span>
+      </button>
+      <button
+        class="flex flex-col items-center px-4 py-2"
+        hx-get="/contact.html"
+        hx-target="#content"
+      >
+        <span>📩</span>
+        <span class="text-xs">Contact</span>
+      </button>
+      <button
+        class="flex flex-col items-center px-4 py-2"
+        hx-get="/resume.html"
+        hx-target="#content"
+      >
+        <span>📄</span>
+        <span class="text-xs">Resume</span>
+      </button>
+    </div>
 
-    <!-- Dynamic Content Section -->
     <section
       id="content"
-      class="container mx-auto p-8 bg-white shadow-md mt-8 rounded-lg"
+      class="container mx-auto p-8 bg-white shadow-md mt-8 rounded-lg mb-11"
     >
       <p>Select a section to view more details.</p>
     </section>
   </body>
 </html>
+<script>
+  let isTyping = false;
+
+  function typeText() {
+    const text = "Dev | Solver | Storyteller";
+    const typewriter = document.getElementById("typewriter");
+    const cursor = document.getElementById("cursor");
+
+    if (isTyping || !typewriter) return;
+
+    isTyping = true;
+    typewriter.innerHTML = "";
+    cursor.style.display = "inline";
+
+    let index = 0;
+
+    function type() {
+      typewriter.innerHTML =
+        text.substring(0, index) + "<span id='cursor'></span>";
+      if (index < text.length) {
+        typewriter.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, 80);
+      } else {
+        cursor.style.display = "none";
+        isTyping = false;
+      }
+    }
+
+    type();
+  }
+
+  document.addEventListener("htmx:load", typeText);
+</script>
