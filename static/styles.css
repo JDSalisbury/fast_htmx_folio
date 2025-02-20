@@ -1,3 +1,109 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+
+/* Retro Color Classes */
+:root {
+  --top-color: #c14c0d; /* Orange */
+  --bg-color: #000000; /* Black */
+  --text-color: #ffffff; /* White */
+  --border-color: #ff6d1f; /* Orange */
+}
+.color-1 { color: var(--top-color) } /* Orange */
+.color-2 { color: #ffb300; } /* Yellow */
+.color-3 { color: #00a5e0; } /* Blue */
+.color-4 { color: #5b2c90; } /* Purple */
+.color-5 { color: #ff4d4d; } /* Red */
+
+
+/* Typing Effect */
+#typewriter {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    border-right: 2px solid var(--top-color); /* Retro cursor effect */
+    padding-right: 5px;
+    max-width: 100%;
+  }
+  
+  /* Blinking Cursor */
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+  
+  .animate-blink {
+    animation: blink 1s step-start infinite;
+  }
+
+
+
+/* Slide-in Effect */
+@keyframes slide-in {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-slide-in {
+  animation: slide-in 1s ease-in-out;
+}
+
+/* Fast Fade-in */
+@keyframes fade-in-fast {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in-fast {
+  animation: fade-in-fast 0.8s ease-in-out;
+}
+
+
+.bg-top-color {
+    background-color: var(--top-color);
+}
+
+.border-top-color {
+border-color: var(--top-color);
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    #typewriter {
+      font-size: 1rem; /* Smaller text on mobile */
+    }
+  
+    h2, h3 {
+      font-size: 1.5rem; /* Reduce heading size for small screens */
+    }
+  
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  
+    ul li {
+      font-size: 1rem;
+      padding-left: 8px;
+    }
+    #typewriter {
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+        border-right: 2px solid var(--top-color);
+        padding-right: 5px;
+        max-width: 100%;
+      }
+      
+      /* Blinking Cursor */
+      @keyframes blink {
+        50% { opacity: 0; }
+      }
+      
+      .animate-blink {
+        animation: blink 1s step-start infinite;
+      }
+      
+  }
+  
+  /* Typing Effect */
+  
